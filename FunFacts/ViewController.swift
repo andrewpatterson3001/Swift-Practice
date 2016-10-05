@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let randomColor = ColorModel().getRandomColor()
         view.backgroundColor = randomColor
         funFactButton.tintColor = randomColor
-        funFactButton.backgroundColor = UIColor.whiteColor()
+        funFactButton.backgroundColor = UIColor.white
         funFactLabel.text = factModel.getRandomFact()
     }
 

@@ -22,7 +22,7 @@ struct FactModel {
         "Mammoths still walked the Earth when the Great Pyramid was being built." ]
     
     func getRandomFact()->String {
-        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(facts.count)
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
         return facts[randomNumber]
     }
 
