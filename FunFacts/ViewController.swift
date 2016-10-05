@@ -11,10 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var funFactLabel: UILabel!
+    @IBOutlet weak var funFactButton: UIButton!
+    
+    let factModel = FactModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        funFactLabel.text = "An interesting Fact..."
+        funFactLabel.text = factModel.getRandomFact()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +26,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showFunFact() {
-        funFactLabel.text = "Another Interesting Fact!"
+        let randomColor = ColorModel().getRandomColor()
+        view.backgroundColor = randomColor
+        funFactButton.tintColor = randomColor
+        funFactButton.backgroundColor = UIColor.whiteColor()
+        funFactLabel.text = factModel.getRandomFact()
     }
 
 }
